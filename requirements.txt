@@ -1,0 +1,3 @@
+cryptography
+tkinter
+Pillow==2.2.2
