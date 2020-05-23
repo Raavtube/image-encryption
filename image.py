@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 from tkinter import Label, Tk
 from PIL import Image, ImageTk
-import tkFileDialog
+from tkinter import filedialog
 root = Tk()
 
-path = tkFileDialog.askopenfilename(filetypes=[("Image File", '.jpg')])
+path = filedialog.askopenfilename(filetypes=[("Image File", '.jpg')])
 im = Image.open(path)
 tkimage = ImageTk.PhotoImage(im)
+print(path)
 myvar = Label(root, image=tkimage)
 myvar.image = tkimage
 myvar.pack()
